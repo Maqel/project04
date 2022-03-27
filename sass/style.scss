@@ -1,0 +1,80 @@
+/*Font*/
+
+$font-header: 'Merriweather', serif;
+$font-text: 'EB Garamond', serif;
+$font-text-second: 'Dancing Script', cursive;
+
+/*Variables*/
+
+$color_one: hsl(0, 0%, 90%);
+$color-two: hsl(46deg 99% 60%);
+$color-three: hsl(0deg 0% 100%);
+$color-four: hsl(0deg 0% 13%);
+$color-five: rgb(53, 59, 72);
+$color-six: rgb(245, 246, 250);
+
+/*Global*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/*Body*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $font-text;
+    text-align: center;
+    background: $color_one;
+    font-size: 16px;
+    color: $color-four;
+
+    p{
+        color: $color-five;
+        font-size: 12px;
+    }
+}
+
+/*Splash*/
+
+.splash { 
+    background-image: url("https://i.postimg.cc/CM2cYyQG/splash-min.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 75vh;
+    position: relative;
+    color: $color-three;
+
+    .splash-inner {
+        font-family: $font-header;
+        padding: 100px;
+        font-size: 32px;
+        letter-spacing: 4px;
+
+        h3 {
+            font-family: $font-text;
+        }
+        
+        .btn {
+            display: inline-block;
+            min-width: 160px;
+            margin-top: 24px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border-width: 2px;
+            border-style: solid;
+            background: $color-two;
+            background-position: 100% 0;
+            color: $color-four;
+            border-color:$color-three;
+        }
+
+    }
+
+}
