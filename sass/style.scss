@@ -12,6 +12,7 @@ $color-three: hsl(0deg 0% 100%);
 $color-four: hsl(0deg 0% 13%);
 $color-five: rgb(53, 59, 72);
 $color-six: rgb(245, 246, 250);
+$transition: all 1s;
 
 /*Global*/
 
@@ -88,7 +89,7 @@ body {
     margin: 0 auto;
     align-items: center;
 
-    .logo {
+    .logo p {
         font-family: $font-text-second;
         color: $color-two;
         font-size: 30px;
@@ -138,7 +139,7 @@ body {
 
                 .icons i {
                     font-size: 30px;
-                    background: $color-three;
+                    background: $color-four;
                     width: 60px;
                     height: 60px;
                     line-height: 60px;
@@ -147,14 +148,23 @@ body {
                     border-width: 2px;
                     border-color: $color-two;
                     text-align: center;
+                    border-width: 3px;
+
+                    &:hover {
+                        background: $color-two;
+                        color: $color-four;
+                    }
                 }
                     
                 .title {
                     font-size: 18px;
                 }
 
-                p {
-                    padding:10px 60px;
+                .description {
+                    padding:10px 30px;
+                    justify-content: center;
+                    align-items: center
+                    
                 }
 
             }
@@ -191,5 +201,38 @@ body {
             height: 350px;
             object-fit: cover
         }    
+    }
+}
+
+/*Footer*/
+
+.footer {
+    padding: 50px 20px;
+    
+    .container { 
+        position: relative;
+        
+        .social {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            i {
+            margin: 5px 5px;
+            font-size: 30px;
+            background: $color-four;
+            color: $color-three;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            border-radius: 50%;
+            transition: $transition;
+
+                &:hover {
+                cursor: pointer;
+                background: $color-two;
+                }
+            }
+        }
     }
 }
