@@ -236,3 +236,21 @@ body {
         }
     }
 }
+
+/* Media */
+
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .box {
+
+        max-width: 100%;
+        height: 50%;
+    }
+
+    p{
+        font-size: 14px;
+    }
+}
